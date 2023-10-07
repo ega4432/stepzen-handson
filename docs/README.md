@@ -27,7 +27,7 @@ API Connect 管理は、新しい GraphQL API と既存の REST API を統合す
 
 ## 前提条件
 
-IBM API Connect 環境が必要です。このラボの一環として、AWS で IBM API Connect as a Service を使用します。アカウントをお持ちでない場合は、この <a href="https://ibm-integration.github.io/learninghub/labs/trial-aws/#1-start-your-ibm-api-" の手順に従ってください。 connect-trial-on-aws" target="_blank">ドキュメント</a>を参照して、30 日間のトライアルアカウントを作成します。
+IBM API Connect 環境が必要です。このラボの一環として、AWS で IBM API Connect as a Service を使用します。アカウントをお持ちでない場合は、この <a href="https://ibm-integration.github.io/learninghub/labs/trial-aws/#1-start-your-ibm-api-connect-trial-on-aws" target="_blank">ドキュメント</a>を参照して、30 日間のトライアルアカウントを作成します。
 
 StepZen アカウントが必要です。StepZen は、開発者が GraphQL API を構築する簡単な方法を提供します。StepZen は宣言型プログラミング アプローチ (HOW を明示的に指定せずに、プログラムが何を行うかを記述する) を採用しており、その結果、コードがより小さく直感的になり、実行時のパフォーマンスが向上し、価値実現までの時間が短縮されます。StepZen は柔軟性が非常に高いように設計されています。他の API アプローチと互換性があり、サービスとして (SaaS) で利用できるほか、プライベート クラウドやオンプレミス データ センターでの展開もサポートしています。アカウントをお持ちでない場合は、<a href="https://stepzen.com/signup" target="_blank">こちら</a>から無料の StepZen アカウントを作成して開始できます (クレジット カードは必要ありません)必須）。
 
