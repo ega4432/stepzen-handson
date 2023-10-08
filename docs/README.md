@@ -303,50 +303,45 @@ stepzen import mysql --db-host='db.introspection.stepzen.net' --db-database='int
 ```
 getAddressById(id: Int!): [アドレス]
 @dbquery(
-  タイプ:「mysql」
-  クエリ: """
+  type: "mysql"
+  query: """
   SELECT * FROM `address` where `id` = ?
-  「」
-  設定: "mysql_config"
+  """
+  configuration: "mysql_config"
 )
 ```
-このコードは、mySQL データベースからアドレスを選択するための getAddressById クエリを定義しています。
+このコードは、MySQL データベースからアドレスを選択するための getAddressById クエリを定義しています。
 ![](images/merge-blocks-1.png)
+ファイルを **保存**します ([ファイル] > [保存] または CTRL+S)。
 
-  ファイルを **保存**します ([ファイル] > [保存] または CTRL+S)。
-
-2. 次に、**curl** フォルダーから **index.graphql** ファイルを開きます (1)。これは顧客の REST API からのスキーマです。下にスクロールして「*type RootEntry*」セクションを表示します。この時点では、アドレスは REST API エンドポイントから取得されています。この値を MySQL データベースから取得するように変更しましょう。現在のアドレス型定義(アドレス:Address)を以下のコード(2)に置き換えます。
+2. 次に、**curl** フォルダーから **index.graphql** ファイルを開きます (1)。これは顧客の REST API からのスキーマです。下にスクロールして「*type RootEntry*」セクションを表示します。この時点では、アドレスは REST API エンドポイントから取得されています。この値を MySQL データベースから取得するように変更しましょう。現在のアドレス型定義(address:Address)を以下のコード(2)に置き換えます。
 ```
-住所: [住所]
-  @materializer (クエリ: "getAddressById")
+address: [Address]
+  @materializer (query: "getAddressById")
 ```
 ![](images/merge-blocks-2.png)
-
-  ファイルを **保存**します ([ファイル] > [保存] または CTRL+S)。
+ファイルを **保存**します ([ファイル] > [保存] または CTRL+S)。
 
 3. 新しい API をデプロイしましょう。そして、StepZen ダッシュボードを更新します。
 ```
-ステップゼンスタート
+stepzen start
 ```
 ![](images/merge-blocks-3.png)
 
 4. StepZen ダッシュボード ページで、ビルダー セクション (1) を使用して、住所属性を含む顧客クエリを作成します (2)。クエリを再度実行し (3)、結果データが Rest および MySQL データベースから取得されていることを確認します (4)。
 ![](images/merge-blocks-4.png)
-
-  素晴らしい！REST API と MySQL データベースから合成して、GraphQL API を作成しました。次のセクションでは、IBM API Connect を使用してこの API を管理する方法を説明します。
+素晴らしい！REST API と MySQL データベースから合成して、GraphQL API を作成しました。次のセクションでは、IBM API Connect を使用してこの API を管理する方法を説明します。
 
 5. APIC セクションに進む前に、API エンドポイント (1) と認可ヘッダー (2) のコピーを取得します。これらは、後で API を呼び出すために必要になります。
 ![](images/merge-blocks-5.png)
-
 ここで強調すべき重要な点の 1 つは、StepZen が GraphQL スキーマとエンドポイントへのアクセスをどのように制御するかについてです。
-
 GraphQL API を構築するときは、これらのエンドポイントの不正使用を防ぐためにアクセス制御メカニズムを追加する必要があります。StepZen は、この問題に対して 2 つの異なる解決策をサポートしています。
   - API キー: API キーを使用して、エンドポイント全体へのアクセスを制御できます。API キーはデフォルトのアクセス制御メカニズムです。
-  - フィールド ポリシー: フィールド ポリシーを使用して、エンドポイント上の特定のエントリ ポイント フィールドへのアクセスを制御できます。フィールド ポリシーは、属性ベースのアクセス制御と同様のモデルを使用して、GraphQL API へのきめ細かいアクセス制御を提供します。
+  - フィールド・ポリシー: フィールド・ポリシーを使用して、エンドポイント上の特定のエントリポイント・フィールドへのアクセスを制御できます。フィールド・ポリシーは、属性ベースのアクセス制御と同様のモデルを使用して、GraphQL API へのきめ細かいアクセス制御を提供します。
 
-StepZen は、アカウントで使用する 2 つの異なるタイプの API キー、管理者キーと API キーを提供します。管理者キーはアカウントへの管理レベルのアクセスを提供するもので、開発時にのみ使用してください。API キーはアカウントへのアクセスがより制限されているため、運用環境で使用する必要があります。
+StepZen は、アカウントで使用する2つの異なるタイプのAPIキー、管理者キーと API キーを提供します。管理者キーはアカウントへの管理レベルのアクセスを提供するもので、開発時にのみ使用してください。APIキーはアカウントへのアクセスがより制限されているため、本番環境で使用するべきです。
 
-このラボでは、簡単にするために、管理者キーを使用して API にアクセスします。実際の環境では、API キーまたはフィールド ポリシーを使用して API のセキュリティを向上させる必要があります。
+このラボでは、簡単にするために、管理者キーを使用してAPIにアクセスします。実際の環境では、APIキーまたはフィールド・ポリシーを使用してAPIのセキュリティを向上させる必要があります。
 
 ***
 
@@ -366,13 +361,11 @@ IBM API Connect を使用すると、バックエンド GraphQL サーバーを�
 ![](images/apic-proxy-3.png)
 
 4. ここでは、API Connect Enterprise as a Service 環境を使用しています。API Connect Enterprise as a Service は、IBM API Connect のクラウドベースのエディションです。API Connect Enterprise as a Service を使用すると、完全な API ライフサイクル管理のための最新のユーザー エクスペリエンス、イノベーション、業界標準を使用して、クラウドで作業して API を作成、管理、保護、ソーシャル化することができます。
-
-  API Connect Enterprise as a Service は、配信モデルとして Software-as-a-Service を使用します。このモデルでは、API Connect は Amazon Web Services でホストされ、IBM によって管理されます。ソフトウェアの使用料を支払うだけで、基盤となるインフラストラクチャの所有と維持について心配する必要はありません。API Connect Enterprise as a Service では、AWS の請求書を通じて使用料金を支払います。
-
-  GraphQL プロキシ API を作成する方法を見てみましょう。**ホーム** ページ (1) で下にスクロールし、**API の開発** タイル (2) をクリックします。
+API Connect Enterprise as a Service は、配信モデルとして Software-as-a-Service を使用します。このモデルでは、API Connect は Amazon Web Services でホストされ、IBM によって管理されます。ソフトウェアの使用料を支払うだけで、基盤となるインフラストラクチャの所有と維持について心配する必要はありません。API Connect Enterprise as a Service では、AWS の請求書を通じて使用料金を支払います。
+GraphQL プロキシ API を作成する方法を見てみましょう。**ホーム** ページ (1) で下にスクロールし、**API の開発** タイル (2) をクリックします。
 ![](images/apic-proxy-4.png)
 
-5. 次に、[**追加->API**] をクリックします。
+5. 次に、[**Add->API**] をクリックします。
 ![](images/apic-proxy-5.png)
 
 6. GraphQL プロキシを作成するには、**既存の GraphQL サービス (GraphQL プロキシ) から** (1) を選択します。既存の GraphQL サーバーを指定すると、API Connect はサービスをイントロスペクトし、GraphQL プロキシ サービスを自動的に作成します。次に、[**次へ**] (2) をクリックします。
@@ -380,16 +373,16 @@ IBM API Connect を使用すると、バックエンド GraphQL サーバーを�
 
 7. 次の値を入力します。
 
-   タイトル: **お客様** (1)
-   GraphQL サーバー URL: [*StepZen ダッシュボードからコピーした API URL*] (例: https://wanaka.stepzen.net/api/product-demo/__graphql) (2)
+   タイトル: **customers** (1)
+   GraphQL server URL: [*StepZen dashboardからコピーした API URL*] (例: https://wanaka.stepzen.net/api/product-demo/__graphql) (2)
 ![](images/apic-proxy-7.png)
 
 8. このラボで前に説明したように、StepZen API は API キー アプローチを使用してエンドポイント全体へのアクセスを制御します。そのため、HTTP ヘッダーの認証ヘッダーに API キーを含める必要があります。ここでは、このプロキシ API を設定するためのイントロスペクション用に API スキーマを読み取るためにこれを含めます。このスキーマは今回のみ使用され、後で API 自体を呼び出すために保存されることはありません。やりましょう！
 
-   *HTTP ヘッダー* セクションで、**追加** (1) をクリックして *ヘッダー* として **認可** (2) を入力し、*StepZen ダッシュボード ヘッダー* セクションからコピーした *API キー値* を貼り付けます。 *値*として (3)。次に、[次へ] (4) をクリックします。
+   *HTTP ヘッダー* セクションで、**Add** (1) をクリックして *Header* として **Authorization** (2) を入力し、*StepZen Dashboard ヘッダー* セクションからコピーした *API キー値* を*Value*フィールドに貼り付けます(3)。次に、[次へ] (4) をクリックします。
 ![](images/apic-proxy-8.png)
 
-9. スキーマ検証ツールは、警告とエラーが見つかった場合に報告します。ここではスキーマ警告を無視してください。この警告は後の手順で修正されます。[パス] セクションで、使用可能なエンドポイントを **すべて** 選択し (1)、**次へ** をクリックします (2)。
+9. スキーマ検証ツールは、警告とエラーが見つかった場合に報告します。ここではスキーマ警告を無視してください。この警告は後の手順で修正されます。[Paths] セクションで、使用可能なエンドポイントを **すべて** 選択し (1)、**次へ** をクリックします (2)。
 ![](images/apic-proxy-9.png)
 
 10. [**クライアント ID を使用したセキュリティ保護**] と [**CORS**] の両方をオンのままにして (1)、[**次へ**] をクリックします (2)。
