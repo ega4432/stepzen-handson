@@ -183,7 +183,7 @@ stepzen login -a [your_account]
 StepZen CLI を使用すると、REST インターフェイスを備えたバックエンド用の GraphQL API を数分で作成できます。
 
 REST バックエンドがある場合、StepZen を使用して GraphQL API を作成するには 2 つの方法があります。
-  - コマンド ライン インターフェイス (CLI) コマンド stepzen importcurl を使用して、既存の REST エンドポイントを指定します。 StepZen はエンドポイントをイントロスペクトし、GraphQL スキーマを自動生成します。
+  - コマンド ライン インターフェイス (CLI) コマンド stepzen import curl を使用して、既存の REST エンドポイントを指定します。 StepZen はエンドポイントをイントロスペクトし、GraphQL スキーマを自動生成します。
   - スキーマ コードを .graphql GraphQL スキーマ定義言語 (SDL) ファイルに記述します。強力な GraphQL ディレクティブ @rest を使用して REST エンドポイントに接続すると、わずか数行のコードで機能するスキーマが完成します。
 
 このセクションでは、既存の REST API で stepzen importcurl を使用する方法を学習します。このコマンドは、curl リクエストを StepZen に送信し、JSON レスポンスから GraphQL タイプを解析します。
