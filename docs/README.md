@@ -167,7 +167,7 @@ http://www.stepzen.com
 
 6. Visual Studio Code ターミナル ウィンドウで、以下のコマンドを実行して StepZen CLI にログインし、[your_account] をアカウント ページのアカウント値 (1) に置き換えます。
 ```
-stepzen ログイン -a [あなたのアカウント]
+stepzen login -a [your_account]
 ```
 ![](images/setup-sz-7.png)
 
@@ -184,7 +184,7 @@ StepZen CLI を使用すると、REST インターフェイスを備えたバッ
 
 REST バックエンドがある場合、StepZen を使用して GraphQL API を作成するには 2 つの方法があります。
   - コマンド ライン インターフェイス (CLI) コマンド stepzen importcurl を使用して、既存の REST エンドポイントを指定します。 StepZen はエンドポイントをイントロスペクトし、GraphQL スキーマを自動生成します。
-  - スキーマ コードを .graphql GraphQL スキーマ定義言語 (SDL) ファイルに記述します。強力な GraphQL ディレクティブ @rest を使用して REST エンドポイントに接続すると、わずか数行のコードで機能するスキーマが完成します。)
+  - スキーマ コードを .graphql GraphQL スキーマ定義言語 (SDL) ファイルに記述します。強力な GraphQL ディレクティブ @rest を使用して REST エンドポイントに接続すると、わずか数行のコードで機能するスキーマが完成します。
 
 このセクションでは、既存の REST API で stepzen importcurl を使用する方法を学習します。このコマンドは、curl リクエストを StepZen に送信し、JSON レスポンスから GraphQL タイプを解析します。
 
@@ -210,7 +210,7 @@ stepzen init --endpoint=api/product-demo
 
 4. 次に、StepZen を利用して REST エンドポイントをイントロスペクトし、GraphQL スキーマを自動生成しましょう。ここでは、事前に作成された REST API を使用します。
 ```
-stepzen importcurl "https://introspection.apis.stepzen.com/customers" --query-name "customers"
+stepzen import curl "https://introspection.apis.stepzen.com/customers" --query-name "customers"
 ```
 ![](images/build-rest1-4.png)
 
@@ -220,10 +220,10 @@ stepzen importcurl "https://introspection.apis.stepzen.com/customers" --query-na
 6. 新しく作成した **product-demo** フォルダー (1) を選択し、**フォルダーの選択** をクリックします (2)。
 ![](images/build-rest1-6.png)
 
-7. 必要に応じて、[**はい、著者を信頼します**] ボタンをクリックします。
+7. 必要に応じて、[**Yes, I trust the authors**] ボタンをクリックします。
 ![](images/build-rest1-7.png)
 
-8. GraphQL スキーマを確認するには、**curl** フォルダーを開き、**index.graphql** ファイルを選択します (1)。.graphQL ファイル (2) を探索して確認してください。
+8. GraphQL スキーマを確認するには、**curl** フォルダーを開き、**index.graphql** ファイルを選択します (1)。index.graphQL ファイル (2) を探索して確認してください。
 ![](images/build-rest1-8.png)
 
 9. 必要に応じて、[**表示 > ターミナル**] をクリックしてターミナル ウィンドウを再度表示します。
@@ -277,8 +277,8 @@ stepzen start
 ## 6 - MySQL データベースから GraphQL スキーマを自動生成する
 
 SQL データベース バックエンドがある場合、StepZen を使用して GraphQL API を作成するには 2 つの方法があります。
-  - コマンドライン インターフェイス (CLI) コマンド stepzen import [mysql | mysql | mysql] を使用します。postgresql] を使用してデータベースを指定します。StepZen はデータベースをイントロスペクトし、GraphQL スキーマを自動生成します。
-  - スキーマ コードを .graphql GraphQL スキーマ定義言語 (SDL) ファイルに記述します。GraphQL ディレクティブ @dbquery を使用してデータベースに接続すると、わずか数行のコードで機能するスキーマが完成します。)
+  - コマンドライン インターフェイス (CLI) コマンド stepzen import [mysql | postgresql] を使用してデータベースを指定します。StepZen はデータベースをイントロスペクトし、GraphQL スキーマを自動生成します。
+  - スキーマ コードを .graphql GraphQL スキーマ定義言語 (SDL) ファイルに記述します。GraphQL ディレクティブ @dbquery を使用してデータベースに接続すると、わずか数行のコードで機能するスキーマが完成します。
 
 このセクションでは、stepzen import mysql の使用方法を学びます。このラボでは、StepZen のサンプル MySQL データベースを使用します。
 
