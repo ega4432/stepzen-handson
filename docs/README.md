@@ -277,7 +277,7 @@ stepzen start
 ## 6 - MySQL データベースから GraphQL スキーマを自動生成する
 
 SQL データベース バックエンドがある場合、StepZen を使用して GraphQL API を作成するには 2 つの方法があります。
-  - コマンドライン インターフェイス (CLI) コマンド stepzen import [mysql | postgresql] を使用してデータベースを指定します。StepZen はデータベースをイントロスペクトし、GraphQL スキーマを自動生成します。
+  - コマンドライン インターフェイス (CLI) コマンド stepzen import [mysql \| postgresql] を使用してデータベースを指定します。StepZen はデータベースをイントロスペクトし、GraphQL スキーマを自動生成します。
   - スキーマ コードを .graphql GraphQL スキーマ定義言語 (SDL) ファイルに記述します。GraphQL ディレクティブ @dbquery を使用してデータベースに接続すると、わずか数行のコードで機能するスキーマが完成します。
 
 このセクションでは、stepzen import mysql の使用方法を学びます。このラボでは、StepZen のサンプル MySQL データベースを使用します。
