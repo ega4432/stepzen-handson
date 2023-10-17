@@ -152,7 +152,7 @@ npm install -g stepzen
 
 2. 次に、StepZenAccount でログインしましょう。ブラウザ ウィンドウに戻り、<a href="http://www.stepzen.com" target="_blank">以下の URL</a> を開き (1)、**ログイン** リンクをクリックします (2) ）。
 ```
-http://www.stepzen.com
+https://www.stepzen.com
 ```
 ![](images/setup-sz-2.png)
 
@@ -301,7 +301,7 @@ stepzen import mysql --db-host='db.introspection.stepzen.net' --db-database='int
 
 1. **mysql** フォルダー (1) の **index.graphql** で、下にスクロールして '*type Query*' 宣言を確認します。「**Query for type 'Address'**」という文の下に、以下のクエリ コード (2) が含まれます。
 ```
-getAddressById(id: Int!): [アドレス]
+getAddressById(id: Int!): [Address]
 @dbquery(
   type: "mysql"
   query: """
