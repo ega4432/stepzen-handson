@@ -58,16 +58,16 @@ GraphQL には、REST API に比べて次のような特別な利点がありま
 このラボでは、次のセクションを完了します。
 
   - <a href="https://szgqladm.github.io/#1---nodejs-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B" target="_self">1 - Node.JS をインストールする</a>
-  - 2 - IDE をインストールする
-  - 3 - StepZen のセットアップ
-  - 4 - REST API から GraphQL API を構築する
-  - 5 - GraphQL API に新しい REST API を追加する
-  - 6 - MySQL データベースから GraphQL スキーマを自動生成する
-  - 7 - @materializer を使用したビルディング ブロックのコンポジションの作成
-  - 8 - APIC で GraphQL プロキシ API を作成する
-  - 9 - GraphQL プロキシ API の編集とテスト
-  - 10 - プロダクトを作成し、GraphQL RateLimits を適用する
-  - 11 - 開発者ポータルから API を探索する
+  - <a href="https://szgqladm.github.io/#2---ide-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B" target="_self">2 - IDE をインストールする</a>
+  - <a href="https://szgqladm.github.io/#3---stepzen-%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97" target="_self">3 - StepZen のセットアップ</a>
+  - <a href="https://szgqladm.github.io/#4---rest-api-%E3%81%8B%E3%82%89-graphql-api-%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B" target="_self">4 - REST API から GraphQL API を構築する</a>
+  - <a href="https://szgqladm.github.io/#5---graphql-api-%E3%81%AB%E6%96%B0%E3%81%97%E3%81%84-rest-api-%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B" target="_self">5 - GraphQL API に新しい REST API を追加する</a>
+  - <a href="https://szgqladm.github.io/#6---mysql-%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%81%8B%E3%82%89-graphql-%E3%82%B9%E3%82%AD%E3%83%BC%E3%83%9E%E3%82%92%E8%87%AA%E5%8B%95%E7%94%9F%E6%88%90%E3%81%99%E3%82%8B" target="_self">6 - MySQL データベースから GraphQL スキーマを自動生成する</a>
+  - <a href="https://szgqladm.github.io/#7---materializer-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%83%93%E3%83%AB%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0-%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%AE%E6%A7%8B%E6%88%90%E3%81%AE%E4%BD%9C%E6%88%90" target="_self">7 - @materializer を使用したビルディング ブロックのコンポジションの作成</a>
+  - <a href="https://szgqladm.github.io/#8---apic-%E3%81%A7-graphql-%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7-api-%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B" target="_self">8 - APIC で GraphQL プロキシ API を作成する</a>
+  - <a href="https://szgqladm.github.io/#9---graphql-%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7-api-%E3%81%AE%E7%B7%A8%E9%9B%86%E3%81%A8%E3%83%86%E3%82%B9%E3%83%88" target="_self">9 - GraphQL プロキシ API の編集とテスト</a>
+  - <a href="https://szgqladm.github.io/#10---%E3%83%97%E3%83%AD%E3%83%80%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E6%88%90%E3%81%97graphql-ratelimits-%E3%82%92%E9%81%A9%E7%94%A8%E3%81%99%E3%82%8B" target="_self">10 - プロダクトを作成し、GraphQL RateLimits を適用する</a>
+  - <a href="https://szgqladm.github.io/#11---%E9%96%8B%E7%99%BA%E8%80%85%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB%E3%81%8B%E3%82%89-api-%E3%82%92%E6%8E%A2%E7%B4%A2%E3%81%99%E3%82%8B" target="_self">11 - 開発者ポータルから API を探索する</a>
 
 ***
 
