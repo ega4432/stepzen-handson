@@ -57,7 +57,7 @@ GraphQL には、REST API に比べて次のような特別な利点がありま
 
 このラボでは、次のセクションを完了します。
 
-  - <a href="https://szgqladm.github.io/#1---nodejs-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B" target="_blank">1 - Node.JS をインストールする</a>
+  - <a href="https://szgqladm.github.io/#1---nodejs-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B" target="_self">1 - Node.JS をインストールする</a>
   - 2 - IDE をインストールする
   - 3 - StepZen のセットアップ
   - 4 - REST API から GraphQL API を構築する
