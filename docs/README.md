@@ -369,7 +369,7 @@ IBM API Connect を使用すると、バックエンド GraphQL サーバーを�
 5. 次に、[**Add->API**] をクリックします。
 ![](images/apic-proxy-5.png)
 
-6. GraphQL プロキシを作成するには、**既存の GraphQL サービス (GraphQL プロキシ) から** (1) を選択します。既存の GraphQL サーバーを指定すると、API Connect はサービスをイントロスペクトし、GraphQL プロキシ サービスを自動的に作成します。次に、[**次へ**] (2) をクリックします。
+6. GraphQL プロキシを作成するには、「API タイプの選択」画面で、**OpenAPI 2.0（デフォルト）**を選択し、**既存の GraphQL サービス (GraphQL プロキシ) から** (1) を選択します。既存の GraphQL サーバーを指定すると、API Connect はサービスをイントロスペクトし、GraphQL プロキシ サービスを自動的に作成します。次に、[**次へ**] (2) をクリックします。
 ![](images/apic-proxy-6.png)
 
 7. 次の値を入力します。
