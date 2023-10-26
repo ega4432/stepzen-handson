@@ -430,7 +430,7 @@ IBM API Connect を使用すると、バックエンド GraphQL サーバーを�
 ![](images/apic-edit-11.png)
 
 12. テスト機能には、GraphQL エディターも含まれています。GraphQL エディターに次の GraphQL クエリを入力します。これは JSON ではありませんが、応答として返される JSON に似ています。**Prettify** オプションを使用して、GraphQL クエリの視覚化を改善できます。
-```
+```graphql
 {
   customers {
     email
