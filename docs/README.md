@@ -363,8 +363,8 @@ IBM API Connect を使用すると、バックエンド GraphQL サーバーを�
 4. ここでは、API Connect Enterprise as a Service 環境を使用しています。API Connect Enterprise as a Service は、IBM API Connect のクラウドベースのエディションです。API Connect Enterprise as a Service を使用すると、完全な API ライフサイクル管理のための最新のユーザー エクスペリエンス、イノベーション、業界標準を使用して、クラウドで作業して API を作成、管理、保護、ソーシャル化することができます。
    API Connect Enterprise as a Service は、配信モデルとして Software-as-a-Service を使用します。このモデルでは、API Connect は Amazon Web Services でホストされ、IBM によって管理されます。ソフトウェアの使用料を支払うだけで、基盤となるインフラストラクチャの所有と維持について心配する必要はありません。API Connect Enterprise as a Service では、AWS の請求書を通じて使用料金を支払います。
 
-   GraphQL プロキシ API を作成する方法を見てみましょう。**ホーム** ページ (1) で下にスクロールし、**API の開発** タイル (2) をクリックします。
-![](images/apic-proxy-4.png)
+   GraphQL プロキシ API を作成する方法を見てみましょう。**ホーム** ページ で、左端のアイコンの、**Develop** のアイコン (1) をクリックします。
+![](images/apic-proxy-4-1.png)
 
 5. 次に、[**Add->API**] をクリックします。
 ![](images/apic-proxy-5.png)
