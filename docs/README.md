@@ -243,7 +243,7 @@ stepzen import curl "https://introspection.apis.stepzen.com/orders" --query-name
 ```
 ![](images/build-rest2-1.png)
 
-2. 新しいgraphQLスキーマを確認するには、**curl-01**フォルダーを開き、新しい**index.graphql**ファイルを開きます(1)。新しいスキーマ (2) をぜひ試してみてください。
+2. 新しいgraphQLスキーマを確認するには、**curl-01**フォルダーを開き、新しい**index.graphql**ファイルを開きます(1)。新しいスキーマ (2) を確認してください。
 ![](images/build-rest2-2.png)
 
 3. 3 番目のスキーマである **product-demo** フォルダー内の **index.graphql** ファイルを開き (1)、このスキーマが他の 2 つのスキーマを参照していることを確認します (2)。
@@ -288,7 +288,7 @@ stepzen import mysql --db-host='db.introspection.stepzen.net' --db-database='int
 ```
 ![](images/build-mysql-1.png)
 
-2. 新しいgraphQLスキーマを確認するには、**mysql**フォルダーを開き、新しい**index.graphql**ファイルを開きます(1)。新しいスキーマ (2) をぜひ試してみてください。
+2. 新しいgraphQLスキーマを確認するには、**mysql**フォルダーを開き、新しい**index.graphql**ファイルを開きます(1)。新しいスキーマ (2) を確認してください。
 ![](images/build-mysql-2.png)
 
   新しい API をデプロイする前に、次のセクションで MySQL データベースと REST API エンドポイントをマージします。
@@ -299,7 +299,7 @@ stepzen import mysql --db-host='db.introspection.stepzen.net' --db-database='int
 
 複数のサブグラフができたので、@materializer を使用してサブグラフ間で型をリンクできます。やりましょう！
 
-1. **mysql** フォルダー (1) の **index.graphql** で、下にスクロールして '*type Query*' 宣言を確認します。「**Query for type 'Address'**」という文の下に、以下のクエリ コード (2) が含まれます。
+1. **mysql** フォルダー (1) の **index.graphql** で、下にスクロールして '*type Query*' 宣言を確認します。「"" **Queries for type 'Address'** ""」という文の下に、以下のクエリ コード (2) を追加します。
 ```
 getAddressById(id: Int!): [Address]
 @dbquery(
@@ -402,7 +402,7 @@ IBM API Connect を使用すると、バックエンド GraphQL サーバーを�
 2. GraphQL API は、いくつかの追加オプションを備えた REST API と同じ構造になっています。REST API と同様に、左側のメニュー バーからセキュリティ スキーマ、パス、定義を追加できます。REST API と同様に、*ゲートウェイ*、*テスト*、*エクスプローラー* タブを表示することもできます。GraphQL API の新しいタブに気づくでしょう。[**GraphQL スキーマ**] タブをクリックしてスキーマを表示します。
 ![](images/apic-edit-2.png)
 
-3. [GraphQL スキーマ] タブには、GraphQL スキーマ内のすべてのタイプのタイプと、各タイプのコストまたは費用のタイプの重み情報が表示されます。重み係数は、GraphQL API へのリクエストのタイプ コストを計算するときに使用されます。たとえば、値を取得するためにサーバー上で大量の CPU またはメモリを使用する必要があるフィールドには、より高いコストが割り当てられます。*警告* メッセージで [**表示**] をクリックします。
+3. [GraphQL スキーマ] タブには、GraphQL スキーマ内のすべてのタイプと、各タイプのコストまたは費用のタイプの重み情報が表示されます。重み係数は、GraphQL API へのリクエストのタイプ コストを計算するときに使用されます。たとえば、値を取得するためにサーバー上で大量の CPU またはメモリを使用する必要があるフィールドには、より高いコストが割り当てられます。*警告* メッセージで [**表示**] をクリックします。
 ![](images/apic-edit-3.png)
 
 4. 警告ウィンドウには、警告の詳細に加えて、制限を適用して警告を修正するオプションが表示されます。この人工知能は多くの場合非常に正確ですが、実際のシナリオでは、アプリケーションのセキュリティに影響を与えるため、結果を慎重に調べ、正確な場合にのみ受け入れることが重要です。この例では、**すべて適用** (1) をクリックし、次に **適用** (2) をクリックします。
