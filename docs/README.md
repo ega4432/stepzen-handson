@@ -516,8 +516,7 @@ IBM API Connect を使用すると、バックエンド GraphQL サーバーを�
 ![](images/apic-product-9.png)
 
 10. 下にスクロールすると、GraphQL のレート制限が表示されます。このセクションから GraphQL のコスト パラメーターを調整できます (フィールドまたはタイプごとのコストを含む)。制限を設定することも、無制限にすることもできます。このチュートリアルでは、何も変更しません。
-
-    GraphQL のレート制限がどのように機能するかを理解したい場合は、これを確認してください <a href="https://www.ibm.com/docs/en/api-connect/10.0.x?topic=api-securing-graphql-by -using-client-id" target="_blank">ドキュメント ページ</a>。
+GraphQL のレート制限がどのように機能するかを理解したい場合は、<a href="https://www.ibm.com/docs/en/api-connect/10.0.5.x_lts?topic=api-securing-graphql-by-using-client-id" target="_blank">ドキュメント ページ</a>を確認してください。
 ![](images/apic-product-10.png)
 
 11. 左側のメニューで、**管理** アイコンをクリックして、サンドボックス カタログを管理します。
